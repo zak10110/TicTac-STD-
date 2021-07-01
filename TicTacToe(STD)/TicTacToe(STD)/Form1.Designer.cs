@@ -1,4 +1,8 @@
-﻿namespace TicTacToe_STD_
+﻿using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace TicTacToe_STD_
 {
     partial class Form1
     {
@@ -32,6 +36,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "Form1";
+
+            List<Button> buttons = new List<Button>();
+            int x = 0;
+            int y = 0;
+            for (int i = 0; i < 9; i++)
+            {
+                buttons.Add(new Button()
+                {
+                    Name = i.ToString(),
+                    Location = new Point(x, y),
+                    Size = new Size(100, 100)
+                });
+                //buttons[i].Click += Button_Click;
+                this.Controls.Add(buttons[i]);
+                x += 100;
+                if (i == 2 || i == 5)
+                {
+                    x = 0;
+                    y += 100;
+                }
+            }
         }
 
         #endregion
