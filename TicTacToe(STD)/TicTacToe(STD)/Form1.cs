@@ -33,7 +33,7 @@ namespace TicTacToe_STD_
 
             if (this.Controls[(sender as Button)?.Name]?.Text != String.Empty) return;
             this.Controls[(sender as Button)?.Name].Text = (isCross == false) ? "X" : "0";
-            this.Controls[(sender as Button)?.Name].BackColor = (isCross == false) ? Color.Aqua : Color.Blue;
+            this.Controls[(sender as Button)?.Name].BackColor = (isCross == false) ? Color.Aqua : Color.DarkCyan;
             player = (isCross == false) ? PlayerTurn.Krest : PlayerTurn.Null;
             if (Convert.ToInt32(this.Controls[(sender as Button)?.Name].Name) <= 2) point.X = int.Parse(this.Controls[(sender as Button)?.Name].Name);
             if (int.Parse(this.Controls[(sender as Button)?.Name].Name) > 2 && int.Parse(this.Controls[(sender as Button)?.Name].Name) <= 5) point.X = int.Parse(this.Controls[(sender as Button)?.Name].Name) - 3;
