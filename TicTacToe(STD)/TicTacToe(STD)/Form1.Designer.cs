@@ -48,7 +48,7 @@ namespace TicTacToe_STD_
                     Location = new Point(x, y),
                     Size = new Size(100, 100)
                 });
-                //buttons[i].Click += Button_Click;
+                buttons[i].Click += Button_Click;
                 this.Controls.Add(buttons[i]);
                 x += 100;
                 if (i == 2 || i == 5)
